@@ -9,9 +9,14 @@ def add_todo():
 
 todos = app_functions.get_todos()
 
+sl.set_page_config(layout="wide")
+
 sl.title("Lista Zadań by Michał Mironowicz")
 sl.subheader("Totalnie umiem programowac")
 sl.write("Kaja obczaj temat")
+
+sl.text_input(label="",placeholder="Napisz cos, jak chcesz lol nic na sile dobra elo",
+              key="new_todo", on_change=add_todo)
 
 for index, item in enumerate(todos):
     checkbox = sl.checkbox(item, key=item)
@@ -21,5 +26,3 @@ for index, item in enumerate(todos):
         del sl.session_state[item]
         streamlit.experimental_rerun()
 
-sl.text_input(label="",placeholder="Napisz cos, jak chcesz lol nic na sile dobra elo",
-              key="new_todo", on_change=add_todo)
