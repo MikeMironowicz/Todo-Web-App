@@ -21,6 +21,5 @@ for index, item in enumerate(todos):
         del sl.session_state[item]
         streamlit.experimental_rerun()
 
-sl.text_input(label="",placeholder="Enter your todo here, or don't."
-                                   " Your lazy ass is not my problem.",
+sl.text_input(label="",placeholder="Napisz cos, jak chcesz lol nic na sile dobra elo",
               key="new_todo", on_change=add_todo)
