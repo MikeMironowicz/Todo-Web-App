@@ -10,8 +10,8 @@ def add_todo():
 todos = app_functions.get_todos()
 
 sl.title("Lista Zadań by Michał Mironowicz")
-sl.subheader("Który jest bardzo atrakcyjny")
-sl.write("i zabawny")
+sl.subheader("Totalnie umiem programowac")
+sl.write("Kaja obczaj temat")
 
 for index, item in enumerate(todos):
     checkbox = sl.checkbox(item, key=item)
